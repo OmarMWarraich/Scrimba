@@ -1,13 +1,10 @@
+let username = "per"
 
-let count = 0
+let message = "You have new notifications"
 
-let countEl = document.getElementById('count-el')
+let messageToUser = message + "," + username + "!"
 
-function increment() {
-    count = count + 1
-    countEl.innerText = count
-}
+console.log(messageToUser)
 
-function save() {
-    console.log(count)
-}
+
+
