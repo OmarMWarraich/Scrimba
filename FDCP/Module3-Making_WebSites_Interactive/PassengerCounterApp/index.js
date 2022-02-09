@@ -1,12 +1,21 @@
-let welcomeEl = document.getElementById('welcome-el')
+// 1. Grab the save-el paragrah and store it in a variable called saveEl
+let saveEl = document.getElementById("save-el")
 
-let uname = "Omar Mohammad"
-let greeting = "Welcome back "
+let countEl = document.getElementById("count-el")
+let count = 0
 
-welcomeEl.innerText = greeting + uname
+console.log(saveEl)
 
-// Add an emoji to the end! 👋
-// WRITE YOUR CODE BELOW HERE
-// HINT: count = count + 1
+function increment() {
+    count += 1
+    countEl.innerText = count
+}
 
-welcomeEl.innerText  += "👋"
+function save() {
+    let countStr = count + " - "
+    // 2. Create a variable that contains both the count and the dash separator, i.e. "12 - "
+    // 3. Render the variable in the saveEl using innerText
+    saveEl.textContent += countStr
+    // NB: Make sure to not delete the existing content of the paragraph
+    console.log(count)
+}
