@@ -1,10 +1,10 @@
-let username = "per"
+let name = "omar"
 
-let message = "You have new notifications"
+let greeting = "Hi, my name is "
 
-let messageToUser = message + "," + username + "!"
+let myGreeting = greeting + name + "!"
 
-console.log(messageToUser)
+console.log(myGreeting)
 
 
 
