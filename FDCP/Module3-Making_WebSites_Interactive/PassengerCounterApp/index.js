@@ -24,3 +24,7 @@ function startGame() {
     }
     messageEl.textContent = message
 }
+
+function newCard(card) {
+    console.log("Drawing a new card from the deck!")
+}
