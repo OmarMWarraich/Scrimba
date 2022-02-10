@@ -1,19 +1,33 @@
+let num1 = 8
+let num2 = 2
+document.getElementById("num1-el").textContent = num1
+document.getElementById("num2-el").textContent = num2
 
+// Create four functions: add(), subtract(), divide(), multiply()
+// Call the correct function when the user clicks on one of the buttons
+// Perform the given calculation using num1 and num2
+// Render the result of the calculation in the paragraph with id="sum-el"
 
-function main() {
-    let input = document.getElementsByClassName('insert');
+// E.g. if the user clicks on the "Plus" button, you should render
+// "Sum: 10" (since 8 + 2 = 10) inside the paragraph with id="sum-el"
+let sumEl = document.getElementById("sum-el")
 
-    document.addEventListener('keydown', function (e) {
-        if (window.event == 13 || e.which == 13) {
-            let num = input[0].value;
-            console.log(num);
-            document.getElementById("feet").textContent = (num + " meters = " + (num * 3.280).toFixed(2) + "feet" + " |" + num + " feet" + " =" + (num / 3.280).toFixed(2) + "meters");
-            document.getElementById("volume").textContent = (num + " litres = " + (num * 0.264).toFixed(2) + "gallons" + " |" + num + " gallons" + " =" + (num / 0.264).toFixed(2) + "litres");
-            document.getElementById("mass").textContent = (num + " kilos = " + (num*2.204).toFixed(2) + "pounds" +" |"+ num + " pounds" + " =" + (num/2.204).toFixed(2) + "kilos" );
-            
-        }
-    })
-    
+function add() {
+    let result = num1 + num2
+    sumEl.textContent = "Sum: " + result
 }
 
-main();
+function subtract() {
+    let result = num1 - num2
+    sumEl.textContent = "Subtract: " + result
+}
+
+function divide() {
+    let result = num1 / num2
+    sumEl.textContent = "Divide: " + result
+}
+
+function multiply() {
+    let result = num1 * num2
+    sumEl.textContent = "Multiply: " + result
+}

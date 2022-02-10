@@ -3,30 +3,15 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        
-        <div class="heading">
-        <h1>Unit Converter</h1>
-        </div>
-        <section class="card">
-        <div class="input">
-                <h4 class="input-field">Metric/Imperial unit conversion</h5>
-                <input type="number" value="0" class="insert">   
-                <h6 class="prefix">(For better readibility, remove '0' prefix)</h6> 
-            </div>
-       
-            <div class="result">
-                <h5>Length (Meter/Feet)</h5>
-                <h6 id="feet"></h6>
-                <h5>Volume (Litres/Gallons)</h5>
-                <h6 id ="volume"></h6>
-                <h5>Mass(Kilograms/Pounds)</h5>
-                <h6 id ="mass"></h6>
-
-                <!-- <span> meters  =</span> 65.616 feet | 20 feet = 6.096 meters -->
-
-            </div>
-        </section>
-
+        <span id="num1-el"></span>
+        <span id="num2-el"></span>
+        <br>
+        <button onclick="add()">Add</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="divide()">Divide</button>
+        <button onclick="multiply()">Multiply</button>
+        <br>
+        <span id="sum-el">Sum: </span>
         <script src="index.js"></script>
     </body>
 </html>
