@@ -1,4 +1,3 @@
-
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -12,7 +11,6 @@ let player = {
     name : "Omar",
     chips : 145
 }
-
 
 let playerEl = document.getElementById("player-el")
 playerEl.textContent = player.name + ":  $" + player.chips
