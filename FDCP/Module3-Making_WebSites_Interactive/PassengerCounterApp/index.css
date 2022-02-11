@@ -1,61 +1,30 @@
-html, body {
-    margin: 10;
-    padding: 10;
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.title{
-    text-align: center;
+/*
+
+Style our app according to the provided design!
+
+green color -> #5f9341
+
+*/
+
+
+input {
+    width: 100%;
+    padding: 10px;    
+    box-sizing: border-box;
+    border: 1px solid #5f9341;
+    margin-bottom: 4px;
 }
 
-.main{
-    width: 50%;
-    margin: auto;
-    background-color: black;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.title-header{
+button {
+    background: #5f9341;
     color: white;
-    padding-top: 20px;
-    margin-bottom: 0;
-}
-
-.title-footer{
-    color: green;
-    
-}
-
-.title-content{
-    color: white;
-    margin-top: 2px;
-    font-size: 8px;
-}
-
-.hr{
-    color: green;
-}
-
-.button {
-    width: 40%;
-    font-size: 8px; 
-    color: white;
-    background-color: green;
-    padding: 5px;
-    border-radius: 4px;
-    border: none;     
-}
-
-.input {
-    padding: 20px;
-    column-count: 2;
-}
-
-.input-box {
-    width: 80%;
-    margin-top: 4px;
-    background-color: lightslategrey;
-    color: green;
-    border: none;
-    border-radius: 4px;    
+    padding: 10px 20px;
+    border: none;    
+    font-weight: bold;
 }
