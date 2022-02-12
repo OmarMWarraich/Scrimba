@@ -1,33 +1,21 @@
-// The generateSentence(desc, arr) takes two parameterer: a description and an array.
-// It should return a string based upon the description and array.
+// Create a function that renders the three team images
+// Use a for loop, template strings (``), plus equals (+=)
+// .innerHTML to solve the challenge.
 
-// Example 1: if you pass in "largest countries",and ["China", "India", "USA"],
-// it should return the string: "The 3 largest countries are China, India, USA"
+const imgs = [
+    "images/hip1.jpg",
+    "images/hip2.jpg",
+    "images/hip3.jpg"
+]
 
-// Example 2: If you pass in "best fruits" and ["Apples", "Bananas"], it should return:
-// "The 2 best fruits are Apples, Bananas"
+const container = document.getElementById("container")
 
-// Use both a for loop and a template string to solve the challenge
-
-function generateSentence(desc, arr) {
-    let baseString = `The ${arr.length} ${desc} are `
-    const lastIndex = arr.length - 1
-    const secondLastIndex = lastIndex - 1
-    for (let i = 0; i < arr.length; i++) {
-        if (i === secondLastIndex) {
-            baseString += arr[i] + ' and '
-        }
-        else if (i === lastIndex) {
-            baseString += arr[i] + '.'
-        } else {
-            baseString += arr[i] + ', '    
-        }        
+function renderImages(images) {
+    let imgsDOM = ""
+    for (let i = 0; i < imgs.length; i++) {
+        imgsDOM += `<img  alt="employee in the company" class="team-img" src="${imgs[i]}">`
     }
-    return baseString
+    container.innerHTML = imgsDOM
 }
 
-const sentence = generateSentence("highest mountains", ["Mountain Everest", "K2"])
-const sentence1 = generateSentence("best fruits", ["Apple", "Bananas"])
-
-console.log(sentence)
-console.log(sentence1)
+renderImages()
