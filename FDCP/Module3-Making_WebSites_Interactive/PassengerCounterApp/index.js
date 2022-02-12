@@ -1,10 +1,13 @@
 // 1. Loop through the myEmojis array and log each of them out to the console
 
 const myEmojis = ["👨‍💻", "⛷", "🍲"]
-
 const emojiContainer = document.getElementById('emojiContainer')
+const emojiInput = document.getElementById('emoji-input')
+const pushBtn = document.getElementById('push-btn')
+const unshiftBtn = document.getElementById('unshift-btn')
 
 function renderEmojis() {
+    emojiContainer.innerHTML = ""
 for (let i = 0; i < myEmojis.length; i++) {
     const emoji = document.createElement('span')
     emoji.textContent = myEmojis[i]
@@ -13,15 +16,19 @@ for (let i = 0; i < myEmojis.length; i++) {
 }
 
 renderEmojis()
-const pushBtn = document.getElementById('push-btn')
 
 pushBtn.addEventListener('click', function () {
-    const emojiInput = document.getElementById('emoji-input')
-    
     if (emojiInput.value) {
         myEmojis.push(emojiInput.value)
         emojiInput.value = ""
-        emojiContainer.innerHTML = ""
+        renderEmojis()
+    }
+})
+
+unshiftBtn.addEventListener('click', function () {    
+    if (emojiInput.value) {
+        myEmojis.unshift(emojiInput.value)
+        emojiInput.value = ""
         renderEmojis()
     }
 })
