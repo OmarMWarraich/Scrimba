@@ -1,21 +1,3 @@
-// Create a function that renders the three team images
-// Use a for loop, template strings (``), plus equals (+=)
-// .innerHTML to solve the challenge.
+// 1. Loop through the myEmojis array and log each of them out to the console
 
-const imgs = [
-    "images/hip1.jpg",
-    "images/hip2.jpg",
-    "images/hip3.jpg"
-]
-
-const container = document.getElementById("container")
-
-function renderImages(images) {
-    let imgsDOM = ""
-    for (let i = 0; i < imgs.length; i++) {
-        imgsDOM += `<img  alt="employee in the company" class="team-img" src="${imgs[i]}">`
-    }
-    container.innerHTML = imgsDOM
-}
-
-renderImages()
+const myEmojis = ["👨‍💻", "⛷", "🍲"]
