@@ -29,9 +29,10 @@ function move() {
     //remove styling from last element
     squares[tail].classList.remove('snake')
     //add sqaure in direction we are heading
-    
+    currentSnake.unshift(currentSnake[0] + direction)
     //add styling so we can see it
-    
+    squares[currentSnake[0]].classList.add('snake')
 }
 move()
 
+let timerId = setInterval(move, 1000)
