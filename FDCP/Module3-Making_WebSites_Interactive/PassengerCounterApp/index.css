@@ -5,22 +5,34 @@ html, body {
     text-align: center;
   }
   
-  /** we need to style our open and close buttons, re-use the comma , to target both buttons **/
+  #open-modal,#close-modal{
+      background-color: royalblue;
+      color: white;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 20px;
+      cursor: pointer;
+  }
   
-  /** modal -> remember we used an ID for this div? we can target it by doing #modal **/
+  #modal {
+      background-color: white;
+      padding: 20px;
+      height: 200px;
+      margin: 0 auto;
+      max-width: 600px;
+      position: relative;
+      top: 30%;  
+  }
   
-  /** overlay -> we also used an ID for this, so do the same as above **/
-  /** the overlay must overtake the screen, so how would you make the overlay 100% height and 100% width so it fills the entire screen? it also must position itself above everything else!
-  
-  /* 
-  ========= Things to note ========= 
-    1) remember on the presentation we want to briefly hide the background of the modal overlay? hint: look at the notes below! rgba...
-    2)
-  */
-  
-  /*
-  ======== Helpers
-    - rgba = red, green blue, alpha (alpha being the opacity on a scale of 0 to 1 - 0.5 sounds good?)
-    - rgba is complex and it's a bit of a time sink to remember all the values, look at rgba colour values online, or rgba colour convetors, or even colour palettes!
-    - if you come from a design background, you'll know you can convert HEX values (e.g. #ffffff to rgba using a convertor)
-  */
+  #overlay {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+  }
