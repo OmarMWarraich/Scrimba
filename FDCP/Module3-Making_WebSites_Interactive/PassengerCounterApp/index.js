@@ -1,14 +1,16 @@
+document.getElementById('searchInput').addEventListener('keyup', (event) => {
+    let searchQuery = event.target.value.toLowerCase();
+    let allNamesDOMCollection = document.getElementsByClassName('name')
+    
+    for (let i = 0; i < allNamesDOMCollection.length; i++){
+        const currentName = allNamesDOMCollection[i].textContent.toLowerCase();
+        console.log(currentName)
 
-const openModal = document.getElementById('open-modal')
-const closeModal = document.getElementById('close-modal')
-const overlay = document.getElementById('overlay')
-
-openModal.addEventListener('click', function () {
-    overlay.style.display = 'block';
+        if (currentName.includes(searchQuery)) {
+            allNamesDOMCollection[i].style.display = 'block';
+        } else {
+            allNamesDOMCollection[i].style.display = 'none';
+        }
+    }
 })
-
-
-closeModal.addEventListener('click', function () {
-    overlay.style.display = 'none';
-})
-
+    

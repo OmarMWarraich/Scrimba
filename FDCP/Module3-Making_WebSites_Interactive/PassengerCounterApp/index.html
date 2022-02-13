@@ -3,28 +3,24 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <!-- 1) we need a div with an ID of 'overlay' -->
-        <div id="overlay">
-            <!-- 2) inside the div of 'overlay', we need a div with an ID of 'modal' -->
-            <div id="modal">
-                <h2>Contact Details</h2>
-                <p>Homer Simpson, 742 Evergreen Terrace (no spam please!) 😀</p>
-                <button id="close-modal">Close! 👋</button>
-            </div>
+        <div id="container">
+        <div id="search">
+            <label for="searchInput">Search Users</label>
+            <input id="searchInput" type="text">
         </div>
-
-        <!-- 4 -->
-        <!-- add a h1 tag with the text '👇 Click to reveal Homer's contact details! 👇' -->
-        <h1>👇 Click to reveal Homer's contact details! 👇</h1>
-        <!-- add a button with the text 'Contact Me 📨' and with an ID of 'open-modal' -->
-        <button id="open-modal">Contact Me 📨</button>
         
+        <ul id="results">
+            <li class="name">Karl</li>
+            <li class="name">Per</li>
+            <li class="name">Katie</li>
+            <li class="name">Lupe</li>
+            <li class="name">Katherine</li>
+            <li class="name">Kelly</li>
+            <li class="name">Kurt</li>
+            <li class="name">Fred</li>
+        </ul>
+        
+    </div>
         <script src="index.js"></script>
     </body>
 </html>
-
-
-<!-- 3) the modal div you can put whatever you want in there... -->
-<!-- 3.1) add a h2 tag in here with text of 'Contact Details'
-<!-- 3.2) add a p tag in here with the text of 'Homer Simpson, 742 Evergreen Terrace (no spam please!) 😀'
-<!-- 3.3) add a button in here with the id of 'close-modal' with the text Close! 👋 (as we'll need a reference to get back to this from the JavaScript we write!) 'close-button' sounds good! -->
