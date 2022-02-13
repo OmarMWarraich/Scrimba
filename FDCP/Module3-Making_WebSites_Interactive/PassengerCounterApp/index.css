@@ -1,85 +1,26 @@
-body {
+html, body {
     margin: 0;
-    font-size: 18px;
-    font-family: 'Lato', sans-serif;
-    color: #2e354f;
-}
-
-h1,
-h2,
-strong {
-    font-weight: 900;
-}
-
-/* Typography */
-
-h1 {
-    font-size: 36px;
-    margin: 0;
-}
-
-h2 {
-    font-size: 24px;
-    color: #ef5839;
-}
-
-a {
-    color: #ef5839;
-}
-
-a:hover,
-a:focus {
-    color: #d4b44c;
-}
-
-/* Buttons */
-
-.btn {
-    display: inline-block;
-    padding: 10px 25px;
-    text-decoration: none;
-}
-
-.btn-accent {
-    background: #ef5839;
-    color: #fff;
-}
-
-.btn-accent:hover {
-    color: #2e354f;
-    background: #d4b44c;
-}
-
-.btn-white {
-    background: #fff;
-    color: #2e354f;
-}
-
-.btn-white:hover {
-    color: #2e354f;
-    background: #999;
-}
-
-/* Layout */
-
-header {
-    background: #2e354f;
-    padding: 45px 0;
-    color: #fff;
-}
-
-section {
-    padding: 45px 0;
-}
-
-.container {
-    width: 620px;
-    margin: 0 auto;
-    /* border: 2px solid magenta; */
-}
-
-.section-two {
-    background: #2e354f;
-    color: #fff;
-}
-
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  
+  /** we need to style our open and close buttons, re-use the comma , to target both buttons **/
+  
+  /** modal -> remember we used an ID for this div? we can target it by doing #modal **/
+  
+  /** overlay -> we also used an ID for this, so do the same as above **/
+  /** the overlay must overtake the screen, so how would you make the overlay 100% height and 100% width so it fills the entire screen? it also must position itself above everything else!
+  
+  /* 
+  ========= Things to note ========= 
+    1) remember on the presentation we want to briefly hide the background of the modal overlay? hint: look at the notes below! rgba...
+    2)
+  */
+  
+  /*
+  ======== Helpers
+    - rgba = red, green blue, alpha (alpha being the opacity on a scale of 0 to 1 - 0.5 sounds good?)
+    - rgba is complex and it's a bit of a time sink to remember all the values, look at rgba colour values online, or rgba colour convetors, or even colour palettes!
+    - if you come from a design background, you'll know you can convert HEX values (e.g. #ffffff to rgba using a convertor)
+  */

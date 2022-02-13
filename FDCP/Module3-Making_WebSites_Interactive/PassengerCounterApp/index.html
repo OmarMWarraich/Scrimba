@@ -1,34 +1,30 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>We did it!</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
-        <link href="index.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="index.css">
     </head>
-    
     <body>
-        <header>
-            <div class="container">
-                <h1>CSS is a lot of fun</h1>
+        <!-- 1) we need a div with an ID of 'overlay' -->
+        <div id="overlay">
+            <!-- 2) inside the div of 'overlay', we need a div with an ID of 'modal' -->
+            <div id="modal">
+                <h2>Contact Details</h2>
+                <p>Homer Simpson, 742 Evergreen Terrace (no spam please!) 😀</p>
+                <button id="close-modal">Close! 👋</button>
             </div>
-        </header>
+        </div>
+
+        <!-- 4 -->
+        <!-- add a h1 tag with the text '👇 Click to reveal Homer's contact details! 👇' -->
+        <h1>👇 Click to reveal Homer's contact details! 👇</h1>
+        <!-- add a button with the text 'Contact Me 📨' and with an ID of 'open-modal' -->
+        <button id="open-modal">Contact Me 📨</button>
         
-        <section class="section-one">
-            <div class="container">
-                <h2>Section One Title.</h2>
-                <img src="images/boardwalk.png" alt="foggy boardwalk with man walking away in the distance">
-                <p>Netus et malesuada fames ac. <a href="#">Sed cras ornare arcu</a> dui vivamus. <strong>Elementum integer enim neque</strong> volutpat ac tincidunt vitae semper.</p>
-            </div>
-        </section>
-        
-        <section class="section-two">
-            <div class="container">
-                <h2>Section Two Title.</h2>
-                <p>Netus et malesuada fames ac. Sed cras ornare arcu dui vivamus. Elementum integer enim neque volutpat ac tincidunt vitae semper.</p>
-                <p>Lorem <a href="#">ipsum dolor sit amet</a>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt <strong>ut labore et dolore</strong>. </p>
-                <a href="#" class="btn btn-accent">contact us</a>
-                <a href="#" class="btn btn-white">more info</a>
-            </div>
-        </section>
+        <script src="index.pack.js"></script>
     </body>
 </html>
+
+
+<!-- 3) the modal div you can put whatever you want in there... -->
+<!-- 3.1) add a h2 tag in here with text of 'Contact Details'
+<!-- 3.2) add a p tag in here with the text of 'Homer Simpson, 742 Evergreen Terrace (no spam please!) 😀'
+<!-- 3.3) add a button in here with the id of 'close-modal' with the text Close! 👋 (as we'll need a reference to get back to this from the JavaScript we write!) 'close-button' sounds good! -->
