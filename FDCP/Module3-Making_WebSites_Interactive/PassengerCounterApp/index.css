@@ -54,6 +54,17 @@ img {
     width: 70%;
 }
 
+@media (max-width: 600px){
+    .columns {
+        flex-direction: column; ``
+    }
+    .col-1,
+    .col-2,
+    .col-3 {
+        width: 100%;
+    }
+}
+
 .col-bg {
     background: #212614;
     color: #fff;
