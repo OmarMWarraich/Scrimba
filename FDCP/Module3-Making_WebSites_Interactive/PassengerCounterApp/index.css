@@ -20,6 +20,10 @@ h2 {
     font-size: 1.5rem;
 }
 
+.p {
+    margin-top: 0;
+}
+
 /* Layout */
 
 img {
@@ -31,6 +35,27 @@ img {
     max-width: 980px;
     margin: 0 auto;
 }
+
 .columns {
     display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+.col-1 {
+    width: 20%;
+}
+
+.col-2 {
+    width: 45%;
+}
+
+.col-3{
+    width: 70%;
+}
+
+.col-bg {
+    background: #212614;
+    color: #fff;
+    padding: 1em;
 }
