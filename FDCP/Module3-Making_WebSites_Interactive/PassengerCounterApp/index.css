@@ -1,26 +1,36 @@
-
-html, body {
-    margin: 10;
-    padding: 10;
+body {
+    font-size: 1.125rem;
+    color: #707070;
+    margin: 0;
 }
 
-.grid {
+/* Typography */
+
+h1 {
+    font-size: 3rem;
+    color: #212614;
+    text-align: center;
+}
+
+h1 span {
+    color: #b7832f;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* Layout */
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 95%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+.columns {
     display: flex;
-    flex-wrap: wrap;
-    width: 200px;
-    height: 200px;
-    border: solid 2px black;
-}
-
-.square {
-    width: 20px;
-    height: 20px;
-}
-
-.snake {
-    background-color: green;
-}
-
-.apple {
-    background-color: blue;
 }
