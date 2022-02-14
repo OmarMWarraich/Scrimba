@@ -70,6 +70,10 @@ strong {
     text-decoration: underline;
 }
 
+.article-info {
+    margin: 2em 0;
+}
+
 /* ====================
 Layout
 ==================== */
@@ -82,30 +86,28 @@ Layout
 
 .container-flex {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 header {
     background: #f8f8f8;
     padding: 2em 0;
+    text-align: center;
 }
 
-@media (max-width: 675px) {
-    .container-nav {
-        flex-direction: column;
+@media (min-width: 675px) {
+    .container-flex {
+        flex-direction: row;
     }
-    
-    header {
-        text-align: center;
+
+    main {
+        width: 75%
     }
-}
 
-main {
-    width: 75%;    
-}
-
-aside {
-    width: 20%;
+    aside {
+        width: 20%
+    }
 }
 
 /* navigation */
@@ -149,4 +151,12 @@ nav a:focus {
     nav li {
         margin: .5em 0;
     }
+}
+
+/* articles */
+
+.article-featured {
+    border-bottom: #707070 1px solid;
+    padding-bottom: 1em;
+    margin-bottom: 3em;
 }
