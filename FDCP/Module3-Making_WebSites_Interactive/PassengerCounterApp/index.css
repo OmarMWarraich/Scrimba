@@ -20,6 +20,7 @@ h3 {
     font-family: 'Lora', serif;
     font-weight: 400;
     color: #143774;
+    margin-top: 0;
 }
 
 h1 {
@@ -160,3 +161,18 @@ nav a:focus {
     padding-bottom: 1em;
     margin-bottom: 3em;
 }
+
+.article-recent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main {
+    order: 2;
+}
+
+.article-recent-secondary {
+    order: 1;
+}
+
