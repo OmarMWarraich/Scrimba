@@ -1,8 +1,8 @@
 import React from 'react';
 
-class WeatherDetails extends React.Component {
-    render() {
-        const { pressure, humidity } = this.props.main
+
+const WeatherDetails = (props) => {
+    const { pressure, humidity } = props.main
         return (
             <>
             <div className="weather-details">
@@ -11,7 +11,6 @@ class WeatherDetails extends React.Component {
               </div>
             </>   
         )
-    }
 }
 
 export default WeatherDetails;
