@@ -44,9 +44,9 @@ setTimeout(callback, 2000)
 
  
 
-const peopleWithPets = people.filter(person => person.hasPet) 
+// const peopleWithPets = people.filter(person => person.hasPet) 
 
-console.log(peopleWithPets)
+// console.log(peopleWithPets)
 
 function filterArray(array, callback) {
     const resultingArray = []
@@ -60,5 +60,14 @@ function filterArray(array, callback) {
     return resultingArray
 }
 
-// We'll do this later
-// const peopleWithPets = filterArray(people, /*??? */)
+/**
+ * Challenge: Use the filter array method!
+ * Given the above `people` array, return a new array with only people where `hasPet` is true.
+ * Note: The callback function will be given the individual item in the array for a parameter.
+ */
+
+const peopleWithPets = filterArray(people, function (person) {
+    return person.hasPet
+})
+
+console.log(peopleWithPets)
