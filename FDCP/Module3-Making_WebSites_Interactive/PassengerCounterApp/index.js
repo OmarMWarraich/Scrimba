@@ -48,11 +48,17 @@ const peopleWithPets = people.filter(person => person.hasPet)
 
 console.log(peopleWithPets)
 
-// https://www.javascripttutorial.net/javascript-array-filter
+function filterArray(array, callback) {
+    const resultingArray = []
+    // Write the filtering logic
+    for (let item of array) {
+        const shouldbeIncluded = callback(item)
+        if (shouldbeIncluded) {
+            resultingArray.push(item)
+        }
+    }
+    return resultingArray
+}
 
-/**
- * Extra challenge to practice array.filter:
- * 
- * Using .filter, create a new array of people who are 18 and older
- * (should be Jill, Alice, and Bob)
- */
+// We'll do this later
+// const peopleWithPets = filterArray(people, /*??? */)
