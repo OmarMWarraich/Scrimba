@@ -24,9 +24,3 @@ document.getElementById("draw-cards").addEventListener("click", () => {
         })
 })
 
-/**
- * Challenge:
- * 
- * Display th images of the 2 cards in the browser.
- * Use `innerHTML``to insert a couple <img> elements on the page.
- */
