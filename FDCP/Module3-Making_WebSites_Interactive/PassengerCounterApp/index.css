@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    color: white;
+    color: black;
 }
 
 button {
@@ -61,4 +61,8 @@ div.top > p {
 
 button:disabled {
     cursor: not-allowed;
+}
+
+h2 {
+    margin: 10px;
 }

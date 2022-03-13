@@ -1,9 +1,13 @@
 let deckId
+let computerScore = 0
+let myScore = 0
 const cardsContainer = document.getElementById("cards");
 const newDeckBtn = document.getElementById("new-deck");
 const drawCardBtn = document.getElementById("draw-cards");
 const header = document.getElementById("header");
 const remainingText = document.getElementById("remaining");
+const computerScoreEl = document.getElementById("computer-score");
+const myScoreEl = document.getElementById("my-score");
 
 function handleClick() {
     fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
@@ -20,12 +24,17 @@ newDeckBtn.addEventListener("click", handleClick)
 /**
  * Challenge:
  * 
- * Disable the Draw button when we have no more cards to draw from
- * in the deck.
+ * Keep score! Every time the computer wins a hand, add a point to
+ * the computer's score. Do the same for every time you win a hand.
+ * If it's a war, no points are awarded to either player. If it's 
+ * a war (same card values), no one is awarded points.
  * 
- * Disable both the functionality of the button (i.e. change
- * `disabled` to true on the button) AND the styling (i.e. add
- * a `disabled` CSS class to make it look unclickable)
+ * Display the computer's score above the top card, display your
+ * own score BELOW the bottom card.
+ * 
+ * Track the scores in a global variable defined at the top of this file
+ * 
+ * Add to the global scores inside the `determinCardWinner` function below.
  */
 
 drawCardBtn.addEventListener("click", () => {
@@ -55,9 +64,13 @@ function determineCardWinner(card1, card2) {
     const card2ValueIndex = valueOptions.indexOf(card2.value)
 
     if (card1ValueIndex > card2ValueIndex) {
-        return "Card 1 wins!"
+        computerScore++
+        computerScoreEl.textContent= `Computer score: ${computerScore}`
+        return "Computer wins!"
     } else if (card1ValueIndex < card2ValueIndex) {
-        return "Card 2 wins!"
+        myScore++
+        myScoreEl.textContent = `My score: ${myScore}`
+        return "You win!"
     } else {
         return "War!"
     }
