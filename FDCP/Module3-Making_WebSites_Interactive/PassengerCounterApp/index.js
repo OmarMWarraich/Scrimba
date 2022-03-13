@@ -16,7 +16,18 @@ function handleClick() {
 }
 
 newDeckBtn.addEventListener("click", handleClick)
- 
+
+/**
+ * Challenge:
+ * 
+ * Disable the Draw button when we have no more cards to draw from
+ * in the deck.
+ * 
+ * Disable both the functionality of the button (i.e. change
+ * `disabled` to true on the button) AND the styling (i.e. add
+ * a `disabled` CSS class to make it look unclickable)
+ */
+
 drawCardBtn.addEventListener("click", () => {
     fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
         .then(res => res.json())
@@ -30,6 +41,10 @@ drawCardBtn.addEventListener("click", () => {
             `
             const winnerText = determineCardWinner(data.cards[0], data.cards[1])
             header.textContent = winnerText
+
+            if (data.remaining === 0) {
+                drawCardBtn.disabled = true
+            }
         })
 })
 
