@@ -15,6 +15,16 @@
         .then(response => response.json())
         .then(data => {
             const fivePosts = data.slice(0, 5)
-            console.log(fivePosts)
+            let html = ""
+            for (let post of fivePosts) {
+                html += `
+                    <div class="post">
+                        <h2>${post.title}</h2>
+                        <p>${post.body}</p>
+                        <hr />
+                    </div>
+                `
+            }
+            document.querySelector("#app").innerHTML = html
         })
  
