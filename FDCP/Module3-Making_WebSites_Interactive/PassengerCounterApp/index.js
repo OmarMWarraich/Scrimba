@@ -28,3 +28,13 @@
             document.querySelector("#app").innerHTML = html
         })
  
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault()
+    const postTitle = document.getElementById("post-title").value
+    const postBody = document.getElementById("post-body").value
+    const data = {
+        title: postTitle,
+        body: postBody
+    }
+    console.log(data);
+})
